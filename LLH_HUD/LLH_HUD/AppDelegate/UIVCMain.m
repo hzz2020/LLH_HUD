@@ -51,8 +51,8 @@
                          [LLHExample exampleWithTitle:@"showMessageInWindow DelayTime" selector:@selector(showInWindowDelayExample)],
                          [LLHExample exampleWithTitle:@"showWarmMessage" selector:@selector(showWarn)],
                          [LLHExample exampleWithTitle:@"showErrorMessage" selector:@selector(showError)],
-                         [LLHExample exampleWithTitle:@"showSuccessMessage" selector:@selector(showSuccess)]
-//                         [LLHExample exampleWithTitle:@"showHUD" selector:@selector(hudRun)],
+                         [LLHExample exampleWithTitle:@"showSuccessMessage" selector:@selector(showSuccess)],
+                         [LLHExample exampleWithTitle:@"showHUD" selector:@selector(hudRun)]
 //                         [LLHExample exampleWithTitle:@"hideHUD" selector:@selector(hudStop)]
                          ];
     
