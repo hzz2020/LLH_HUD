@@ -1,0 +1,73 @@
+//
+//  LLH_HUD-Prefix.pch
+//  LLH_HUD
+//
+//  Created by 李龙辉 on 2017/8/5.
+//  Copyright © 2017年 李龙辉. All rights reserved.
+//
+
+#ifndef LLH_HUD_Prefix_pch
+#define LLH_HUD_Prefix_pch
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "AppSupport.h"
+    #import "AppDefine.h"
+    #import "MBProgressHUD+LLH.h"
+#endif
+
+
+
+////////// XCodeColors插件 //////////
+#define XCODE_COLORS_ESCAPE_MAC @"\033["
+#define XCODE_COLORS_ESCAPE_IOS @"\xC2\xA0["
+
+#if 0
+    #define XCODE_COLORS_ESCAPE  XCODE_COLORS_ESCAPE_IOS
+#else
+    #define XCODE_COLORS_ESCAPE  XCODE_COLORS_ESCAPE_MAC
+#endif
+
+#define XCODE_COLORS_RESET_FG  XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
+#define XCODE_COLORS_RESET_BG  XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
+#define XCODE_COLORS_RESET     XCODE_COLORS_ESCAPE @";"   // Clear any foreground or background color
+
+#ifdef  DEBUG
+    #define LLHLog(frmt, ... )   NSLog( @"[%@ in line %d] ======>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(frmt), ##__VA_ARGS__] )
+
+    #define LogBlue(frmt, ...)   NSLog((XCODE_COLORS_ESCAPE @"fg0,0,255;"     frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+    #define LogRed(frmt, ...)    NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;"     frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+    #define LogGreen(frmt, ...)  NSLog((XCODE_COLORS_ESCAPE @"fg0,255,0;"     frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+    #define LogYellow(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,255,0;"   frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+    #define LogAA(frmt, ...)     NSLog((XCODE_COLORS_ESCAPE @"fg205,190,112;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+    #define LogBB(frmt, ...)     NSLog((XCODE_COLORS_ESCAPE @"fg255,0,255;"   frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+    #define LogCC(frmt, ...)     NSLog((XCODE_COLORS_ESCAPE @"fg0,255,255;"   frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+    #define LogDD(frmt, ...)     NSLog((XCODE_COLORS_ESCAPE @"fg60,210,255;"  frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+    #define LogEE(frmt, ...)     NSLog((XCODE_COLORS_ESCAPE @"fg180,255,60;"  frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+    #define LogFF(frmt, ...)     NSLog((XCODE_COLORS_ESCAPE @"fg255,60,210;"  frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#else
+    #define LLHLog(frmt, ... )
+
+    #define LogBlue(frmt, ...)
+    #define LogRed(frmt, ...)
+    #define LogGreen(frmt, ...)
+    #define LogYellow(frmt, ...)
+    #define LogAA(frmt, ...)
+    #define LogBB(frmt, ...)
+    #define LogCC(frmt, ...)
+    #define LogDD(frmt, ...)
+    #define LogEE(frmt, ...)
+    #define LogFF(frmt, ...)
+#endif
+
+
+
+
+#endif /* LLH_HUD_Prefix_pch */
