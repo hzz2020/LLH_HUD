@@ -45,14 +45,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSArray *methods = @[[LLHExample exampleWithTitle:@"showMessageInView" selector:@selector(showInViewDefaultExample)],
-                         [LLHExample exampleWithTitle:@"showMessageInView DelayTime" selector:@selector(showInViewDelayExample)],
-                         [LLHExample exampleWithTitle:@"showMessageInWindow" selector:@selector(showInWindowDefaultExample)],
-                         [LLHExample exampleWithTitle:@"showMessageInWindow DelayTime" selector:@selector(showInWindowDelayExample)],
-                         [LLHExample exampleWithTitle:@"showWarmMessage" selector:@selector(showWarn)],
-                         [LLHExample exampleWithTitle:@"showErrorMessage" selector:@selector(showError)],
-                         [LLHExample exampleWithTitle:@"showSuccessMessage" selector:@selector(showSuccess)],
-                         [LLHExample exampleWithTitle:@"showHUD" selector:@selector(hudRun)]
+    NSArray *methods = @[[LLHExample exampleWithTitle:@"showMessageInView" selector:@selector(showInViewDefaultExample)]
+                        ,[LLHExample exampleWithTitle:@"showMessageInView DelayTime" selector:@selector(showInViewDelayExample)]
+                        ,[LLHExample exampleWithTitle:@"showMessageInWindow" selector:@selector(showInWindowDefaultExample)]
+                        ,[LLHExample exampleWithTitle:@"showMessageInWindow DelayTime" selector:@selector(showInWindowDelayExample)]
+                        ,[LLHExample exampleWithTitle:@"showWarmMessage" selector:@selector(showWarn)]
+                        ,[LLHExample exampleWithTitle:@"showErrorMessage" selector:@selector(showError)]
+                        ,[LLHExample exampleWithTitle:@"showSuccessMessage" selector:@selector(showSuccess)]
+                        ,[LLHExample exampleWithTitle:@"showHUD" selector:@selector(hudRun)]
 //                         [LLHExample exampleWithTitle:@"hideHUD" selector:@selector(hudStop)]
                          ];
     

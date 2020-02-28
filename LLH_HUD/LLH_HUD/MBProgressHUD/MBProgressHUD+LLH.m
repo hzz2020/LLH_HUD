@@ -139,7 +139,7 @@
 
 
 + (void)showHUD {
-    MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:@"" isWindiw:true];
+    MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:@"Loading" isWindiw:true];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     // 设置一下填充类型，使小人和原来一样胖
     imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -156,9 +156,7 @@
     hud.mode = MBProgressHUDModeCustomView;
     hud.animationType = MBProgressHUDAnimationZoomOut;
     // 不主动消失。
-//    [hud hideAnimated:YES afterDelay:5];
-    // 设置画布的颜色
-    hud.bezelView.color = [UIColor clearColor];
+    [hud hideAnimated:YES afterDelay:5];
 }
 
 + (void)hideHUD {
